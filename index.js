@@ -21,14 +21,14 @@ export default {
         }
       },
       // Stylistic
-      ...stylistic.configs['recommended-flat'],
+      stylistic.configs['recommended-flat'],
       {
         rules: {
           '@stylistic/dot-location': ['error', 'object'],
         }
       },
       // Unicorn plugin
-      ...eslintPluginUnicorn.configs['flat/recommended'],
+      eslintPluginUnicorn.configs['flat/recommended'],
       {
         rules: {
           'unicorn/filename-case': [
@@ -40,7 +40,7 @@ export default {
           'unicorn/prevent-abbreviations': 'off',
         },
       },
-      ...pluginVue.configs['flat/recommended'],
+      pluginVue.configs['flat/recommended'],
       // Vue
       {
         // Only allow script setup
