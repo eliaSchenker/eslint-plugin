@@ -1,14 +1,13 @@
 import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import pluginVue from 'eslint-plugin-vue'
-import { name, version } from './package.json';
 
 
 // TODO split by general, template, setup script and style
 export default {
   meta: {
-    name,
-    version,
+    name: 'nuxt-eslint-plugin',
+    version: '1.0.0',
   },
   configs: {
     'flat/base': [
