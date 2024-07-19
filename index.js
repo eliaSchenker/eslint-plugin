@@ -1,11 +1,15 @@
 import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import pluginVue from 'eslint-plugin-vue'
-import meta from './meta';
+import { name, version } from './package.json';
+
 
 // TODO split by general, template, setup script and style
 export default {
-  meta,
+  meta: {
+    name,
+    version,
+  },
   configs: {
     'flat/base': [
       // General
