@@ -7,7 +7,7 @@ import fs from 'fs';
 import i18nFileKeyCasing from './rules/i18n/file-key-casing.js';
 import i18nFileNoHtml from './rules/i18n/file-no-html.js';
 
-const pkg = JSON.parse(fs.readFileSync(new URL('url').URL('./package.json', import.meta.url), 'utf8'));
+const pkg = JSON.parse(fs.readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
 
 // TODO split by general, template, setup script and style
 export default {
