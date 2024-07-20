@@ -36,7 +36,7 @@ export default {
             },
           }],
           '@stylistic/indent': ['error', 2],
-          '@stylistic/semi': ['error'],
+          '@stylistic/semi': ['error', 'always'],
         }
       },
       // Unicorn plugin
