@@ -25,6 +25,18 @@ export default {
       {
         rules: {
           '@stylistic/dot-location': ['error', 'object'],
+          '@stylistic/member-delimiter-style': ['error', {
+            multiline: {
+              delimiter: 'none',
+              requireLast: true,
+            },
+            singleline: {
+              delimiter: 'comma',
+              requireLast: true,
+            },
+          }],
+          '@stylistic/indent': ['error', 2],
+          '@stylistic/semi': ['error'],
         }
       },
       // Unicorn plugin
@@ -73,7 +85,7 @@ export default {
           ],
           // Enforce multiline blocks
           'vue/block-tag-newline': ['error', {
-            'singleline': 'consistent',
+            'singleline': 'always',
             'multiline': 'always'
           }],
           // Avoid empty copmponent blocks
@@ -111,16 +123,6 @@ export default {
           'vue/no-unused-refs': 'warn',
           'vue/no-unused-properties': 'warn',
           'vue/no-undef-components': 'off',
-          '@stylistic/member-delimiter-style': ['error', {
-            multiline: {
-              delimiter: 'none',
-              requireLast: true,
-            },
-            singleline: {
-              delimiter: 'comma',
-              requireLast: true,
-            },
-          }],
           'vue/dot-location': ['error', 'object'],
         }
       }
