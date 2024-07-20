@@ -38,6 +38,7 @@ export default {
             },
           ],
           'unicorn/prevent-abbreviations': 'off',
+          'unicorn/consistent-function-scoping': 'off',
         },
       },
       pluginVue.configs['flat/recommended'],
@@ -72,7 +73,7 @@ export default {
           ],
           // Enforce multiline blocks
           'vue/block-tag-newline': ['error', {
-            'singleline': 'never',
+            'singleline': 'consistent',
             'multiline': 'always'
           }],
           // Avoid empty copmponent blocks
