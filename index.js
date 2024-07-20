@@ -3,8 +3,9 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import pluginVue from 'eslint-plugin-vue'
 import fs from 'fs';
 
-import i18nFileKeyCasing from 'rules/i18n/file-key-casing.js';
-import i18nFileNoHtml from 'rules/i18n/file-no-html.js';
+// TODO dynamic import + tests
+import i18nFileKeyCasing from './rules/i18n/file-key-casing.js';
+import i18nFileNoHtml from './rules/i18n/file-no-html.js';
 
 const pkg = JSON.parse(fs.readFileSync(new URL('url').URL('./package.json', import.meta.url), 'utf8'));
 
