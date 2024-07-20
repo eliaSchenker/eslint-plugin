@@ -1,13 +1,18 @@
 import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import pluginVue from 'eslint-plugin-vue'
+import fs from 'fs';
 
+import i18nFileKeyCasing from 'rules/i18n/file-key-casing.js';
+import i18nFileNoHtml from 'rules/i18n/file-no-html.js';
+
+const pkg = JSON.parse(fs.readFileSync(new URL('url').URL('./package.json', import.meta.url), 'utf8'));
 
 // TODO split by general, template, setup script and style
 export default {
   meta: {
-    name: 'nuxt-eslint-plugin',
-    version: '1.0.0',
+    name: pkg.name,
+    version: pkg.version,
   },
   configs: {
     'flat/base': [
@@ -94,6 +99,11 @@ export default {
           'vue/define-props-declaration': ['error', 'type-based'],
           // Enforce typed emits
           'vue/define-emits-declaration': ['error', 'type-based'],
+          // Enforce defineProps before defineEmits
+          'vue/define-macros-order': ['error', {
+            'order': ['defineProps', 'defineEmits'],
+            'defineExposeLast': false
+          }],
           // Prefer defineOptions over export default
           'vue/prefer-define-options': 'error',
           // Enforce optional props for props that have a default value (withDefaults)
@@ -113,6 +123,7 @@ export default {
           'vue/no-useless-mustaches': 'error',
           'vue/no-duplicate-attr-inheritance': 'error',
           'vue/no-boolean-default': 'error',
+          // html comment formatting
           'vue/html-comment-indent': 'error',
           'vue/html-comment-content-spacing': 'error',
           'vue/html-comment-content-newline': 'error',
@@ -124,12 +135,14 @@ export default {
           'vue/no-unused-properties': 'warn',
           'vue/no-undef-components': 'off',
           'vue/dot-location': ['error', 'object'],
+          'vue/no-multiple-objects-in-class': 'warn',
         }
       }
     ]
   },
   // Custom rules
   rules: {
-    // TODO
+    'i18n-key-casing': i18nFileKeyCasing,
+    'i18n-no-html': i18nFileNoHtml,
   }
 };
