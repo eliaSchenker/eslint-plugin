@@ -109,7 +109,7 @@ export default {
           'vue/no-unused-emit-declarations': 'warn',
           'vue/no-unused-refs': 'warn',
           'vue/no-unused-properties': 'warn',
-          'vue/no-undef-components': 'warn',
+          'vue/no-undef-components': 'off',
           '@stylistic/member-delimiter-style': ['error', {
             multiline: {
               delimiter: 'none',
