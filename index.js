@@ -1,17 +1,12 @@
 import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import pluginVue from 'eslint-plugin-vue'
-import fs from 'fs';
-import { join } from 'path';
-import { loadRules } from './rules/utils/rule.js';
-
-const pkg = JSON.parse(fs.readFileSync(join(import.meta.url, './package.json'), 'utf8'));
 
 // TODO split by general, template, setup script and style
 export default {
   meta: {
-    name: pkg.name,
-    version: pkg.version,
+    name: 'nuxt-eslint-plugin',
+    version: '1.0.0',
   },
   configs: {
     'flat/base': [
@@ -139,6 +134,4 @@ export default {
       }
     ]
   },
-  // Custom rules
-  rules: await loadRules()
 };

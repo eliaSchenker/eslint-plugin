@@ -16,13 +16,9 @@ yarn add git+ssh://git@github.com/eliaSchenker/nuxt-eslint-plugin.git#1.0.0
 Add config `base` to eslint config
 ```js
 // eslint.config.mjs
-import eslintPlugin from 'nuxt-eslint-plugin';
+import withNuxt from './.nuxt/eslint.config.mjs';
+import nuxtEslintPlugin from 'nuxt-eslint-plugin';
 
-import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
-
-export default createConfigForNuxt({
-  features: {
-    stylistic: true
-  }
-}).prepend(eslintPlugin.configs['flat/base']);
+export default withNuxt().
+  prepend(...nuxtEslintPlugin.configs['flat/base']);
 ```
