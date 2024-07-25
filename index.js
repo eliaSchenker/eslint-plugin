@@ -2,12 +2,10 @@ import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import pluginVue from 'eslint-plugin-vue'
 import fs from 'fs';
+import { join } from 'path';
+import { loadRules } from './rules/utils/rule.js';
 
-// TODO dynamic import + tests
-import i18nFileKeyCasing from './rules/i18n/file-key-casing.js';
-import i18nFileNoHtml from './rules/i18n/file-no-html.js';
-
-const pkg = JSON.parse(fs.readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
+const pkg = JSON.parse(fs.readFileSync(join(import.meta.url, './package.json'), 'utf8'));
 
 // TODO split by general, template, setup script and style
 export default {
@@ -142,8 +140,5 @@ export default {
     ]
   },
   // Custom rules
-  rules: {
-    'i18n-key-casing': i18nFileKeyCasing,
-    'i18n-no-html': i18nFileNoHtml,
-  }
+  rules: await loadRules()
 };

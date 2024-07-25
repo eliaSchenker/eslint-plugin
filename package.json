@@ -6,6 +6,9 @@
   "author": "eliaSchenker <elia.schenker@gmail.com>",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
   "peerDependencies": {
     "eslint": "^9.7.0"
   },
