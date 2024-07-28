@@ -10,7 +10,7 @@ as well as some custom rules.
 
 Install the plugin using yarn, run
 ```bash
-yarn add git+ssh://git@github.com/eliaSchenker/nuxt-eslint-plugin.git#1.0.0
+yarn add git+ssh://git@github.com/eliaSchenker/nuxt-eslint-plugin.git
 ```
 
 Add config `base` to eslint config
