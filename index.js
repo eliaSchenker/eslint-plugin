@@ -128,6 +128,7 @@ export default {
           'vue/no-unused-refs': 'warn',
           'vue/no-unused-properties': 'warn',
           'vue/no-undef-components': 'off',
+          'vue/multi-word-component-names': 'off',
           'vue/dot-location': ['error', 'object'],
           'vue/no-multiple-objects-in-class': 'warn',
         }
