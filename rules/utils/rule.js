@@ -1,12 +1,12 @@
-import fs from 'fs';
-import { join, basename } from 'path';
+import fs from 'node:fs';
+import { join, basename } from 'node:path';
 
 async function loadRule(ruleId) {
   const rule = (await import(`../${ruleId}.js`)).default;
 
   return {
     name: ruleId,
-    rule
+    rule,
   };
 }
 
@@ -15,9 +15,9 @@ async function loadRuleTest(ruleId) {
 }
 
 export async function loadRules() {
-  const files = fs.readdirSync(join(import.meta.url, '..'), {withFileTypes: true})
-    .filter(file => file.isFile())
-    .filter(file => !file.name.endsWith('.test.js'))
+  const files = fs.readdirSync(join(import.meta.url, '..'), { withFileTypes: true }).
+    filter(file => file.isFile()).
+    filter(file => !file.name.endsWith('.test.js'));
   const rules = await Promise.all(files.map(async file => {
     const ruleId = basename(file.name, '.js');
     return [ruleId, await loadRule(ruleId)];
@@ -27,9 +27,9 @@ export async function loadRules() {
 }
 
 export async function loadRuleTests() {
-  const files =  fs.readdirSync(join(import.meta.url.replace('file://', ''), '../..'), {withFileTypes: true})
-    .filter(file => file.isFile())
-    .filter(file => file.name.endsWith('.test.js'))
+  const files = fs.readdirSync(join(import.meta.url.replace('file://', ''), '../..'), { withFileTypes: true }).
+    filter(file => file.isFile()).
+    filter(file => file.name.endsWith('.test.js'));
   return await Promise.all(files.map(async file => {
     const ruleId = basename(file.name, '.test.js');
     return {
@@ -37,4 +37,4 @@ export async function loadRuleTests() {
       test: await loadRuleTest(ruleId),
     };
   }));
-};
+}

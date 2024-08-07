@@ -4,6 +4,7 @@ Contains a variety of recommended rules from the plugins:
 - @stylistic/eslint-plugin
 - eslint-plugin-unicorn
 - eslint-plugin-vue
+- eslint-plugin-tailwindcss
 as well as some custom rules.
 
 ## Setup
