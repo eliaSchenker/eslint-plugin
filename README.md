@@ -9,7 +9,7 @@ Includes the following plugins:
 - eslint-plugin-tailwindcss
 - typescript-eslint
 
-The plugin's recommended rulesets are extended with 
+The plugins' recommended rulesets are extended with 
 opinionated additional configurations.
 
 ## Example Setup: Nuxt
@@ -19,12 +19,11 @@ Install the plugin using yarn, run
 yarn add @elia-schenker/eslint-plugin
 ```
 
-Add config `base` to eslint config
-```js
+Add config `flat/base` to eslint config
+```ts
 // eslint.config.mjs
+import eslintPlugin from '@elia-schenker/eslint-plugin';
 import withNuxt from './.nuxt/eslint.config.mjs';
-import nuxtEslintPlugin from 'nuxt-eslint-plugin';
 
-export default withNuxt().
-  prepend(...nuxtEslintPlugin.configs['flat/base']);
+export default withNuxt(...eslintPlugin.configs['flat/base']);
 ```

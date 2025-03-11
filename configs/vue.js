@@ -1,8 +1,5 @@
-import vue from 'eslint-plugin-vue';
-
 // https://eslint.vuejs.org/rules/
 export default [
-  vue.configs['flat/recommended'],
   // Vue
   {
     rules: {
