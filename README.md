@@ -1,6 +1,6 @@
 # eslint-plugin
 
-Eslint plugin which contains some very opinionated rules that I use for my personal projects.
+Custom eslint plugin I use for my personal projects.
 
 Includes the following plugins:
 - @stylistic/eslint-plugin
@@ -8,6 +8,9 @@ Includes the following plugins:
 - eslint-plugin-vue
 - eslint-plugin-tailwindcss
 - typescript-eslint
+
+The plugin's recommended rulesets are extended with 
+opinionated additional configurations.
 
 ## Example Setup: Nuxt
 
