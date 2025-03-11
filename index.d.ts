@@ -1,9 +1,9 @@
-import type { ESLint, Linter } from "eslint";
+import type { ESLint, Linter } from 'eslint';
 
-declare const nuxtEslintPlugin: ESLint.Plugin & {
+declare const eslintPlugin: ESLint.Plugin & {
   configs: {
     'flat/base': Linter.Config
   }
-}
+};
 
-export = nuxtEslintPlugin;
+export = eslintPlugin;

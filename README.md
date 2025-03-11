@@ -1,17 +1,19 @@
-# nuxt-eslint-plugin
-Plugin to use with nuxt/vue/typescript.
-Contains a variety of recommended rules from the plugins:
+# eslint-plugin
+
+Eslint plugin which contains some very opinionated rules that I use for my personal projects.
+
+Includes the following plugins:
 - @stylistic/eslint-plugin
 - eslint-plugin-unicorn
 - eslint-plugin-vue
 - eslint-plugin-tailwindcss
-as well as some custom rules.
+- typescript-eslint
 
-## Setup
+## Example Setup: Nuxt
 
 Install the plugin using yarn, run
 ```bash
-yarn add git+ssh://git@github.com/eliaSchenker/nuxt-eslint-plugin.git
+yarn add @elia-schenker/eslint-plugin
 ```
 
 Add config `base` to eslint config

@@ -1,9 +1,6 @@
 import stylistic from '@stylistic/eslint-plugin';
 
-/**
- * Configurations for rules of the stylistic plugin
- * See https://eslint.style/packages/default
- */
+// https://eslint.style/packages/default
 export default [
   stylistic.configs['recommended-flat'],
   {
@@ -62,7 +59,7 @@ export default [
         ignoreChainWithDepth: 3,
       }],
       '@stylistic/no-confusing-arrow': 'warn',
-      '@stylistic/no-extra-parens': ['error', 'all'],
+      '@stylistic/no-extra-parens': 'off',
       '@stylistic/no-extra-semi': 'error',
       '@stylistic/no-floating-decimal': 'error',
       '@stylistic/no-mixed-operators': 'warn',
@@ -74,7 +71,6 @@ export default [
       '@stylistic/no-tabs': 'error',
       '@stylistic/no-trailing-spaces': 'error',
       '@stylistic/no-whitespace-before-property': 'error',
-      // Redundant because of 'all' with the curly rull
       '@stylistic/nonblock-statement-body-position': 'off',
       '@stylistic/object-curly-newline': ['error', {
         minProperties: 4,

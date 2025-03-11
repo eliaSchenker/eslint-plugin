@@ -1,11 +1,8 @@
 import unicorn from 'eslint-plugin-unicorn';
 
-/**
- * Configurations for rules of the unicorn plugin
- * See https://github.com/sindresorhus/eslint-plugin-unicorn
- */
+// https://github.com/sindresorhus/eslint-plugin-unicorn
 export default [
-  unicorn.configs['flat/recommended'],
+  unicorn.configs.recommended,
   {
     rules: {
       'unicorn/filename-case': [
@@ -16,6 +13,7 @@ export default [
       ],
       'unicorn/prevent-abbreviations': 'off',
       'unicorn/consistent-function-scoping': 'off',
+      'unicorn/prefer-tenary': 'off',
     },
   },
 ];

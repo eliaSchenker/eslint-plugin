@@ -1,9 +1,6 @@
 import vue from 'eslint-plugin-vue';
 
-/**
- * Configurations for rules of the vue plugin
- * See https://eslint.vuejs.org/rules/
- */
+// https://eslint.vuejs.org/rules/
 export default [
   vue.configs['flat/recommended'],
   // Vue
@@ -111,6 +108,8 @@ export default [
 
       // Enforce camelCase event names
       'vue/custom-event-name-casing': ['error', 'camelCase'],
+
+      'vue/return-in-computed-property': 'off',
 
       'vue/no-unused-properties': 'warn',
       'vue/no-unused-emit-declarations': 'warn',

@@ -1,12 +1,13 @@
 import base from './configs/base.js';
 import stylistic from './configs/stylistic.js';
 import tailwind from './configs/tailwind.js';
+import typescript from './configs/typescript.js';
 import unicorn from './configs/unicorn.js';
 import vue from './configs/vue.js';
 
 export default {
   meta: {
-    name: 'nuxt-eslint-plugin',
+    name: '@eliaSchenker/eslint-plugin',
     version: '1.0.0',
   },
   configs: {
@@ -14,6 +15,7 @@ export default {
       ...base,
       ...stylistic,
       ...tailwind,
+      ...typescript,
       ...unicorn,
       ...vue,
     ],
