@@ -8,7 +8,7 @@ import vue from './configs/vue.js';
 export default {
   meta: {
     name: '@eliaSchenker/eslint-plugin',
-    version: '1.0.1',
+    version: '1.0.2',
   },
   configs: {
     'flat/base': [
