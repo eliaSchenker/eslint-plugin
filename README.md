@@ -16,7 +16,7 @@ opinionated additional configurations.
 
 Install the plugin using yarn, run
 ```bash
-yarn add @elia-schenker/eslint-plugin
+yarn add --dev @elia-schenker/eslint-plugin
 ```
 
 Add config `flat/base` to eslint config
